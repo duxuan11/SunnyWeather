@@ -26,5 +26,6 @@ class SunnyWeatherApplication : Application(){
 //        If your singleton needs a global context (for example to register broadcast receivers), include
 //        Context.getApplicationContext() as a android.content.Context argument when invoking your singleton's getInstance() method
         context = applicationContext
+
     }
 }

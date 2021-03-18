@@ -9,6 +9,14 @@ import kotlin.coroutines.suspendCoroutine
 
 //定义一个统一的网络数据源访问入口，对所有的网络请求的API进行封装
 object SunnyWeatherNetwork {
+    private val weatherService = ServiceCreator.create(WeatherService::class.java)
+
+    suspend fun getDailyWeather(lng: String, lat: String) =
+            weatherService.getDailyWeather(lng,lat).await()
+
+    suspend fun getRealtimeWeather(lng: String,lat: String) =
+            weatherService.getRealtimeWeather(lng,lat).await()
+
     private val placeService = ServiceCreator.create<PlaceService>()
 
     //动态代理对象
