@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:src ="@drawable/bg_place"/>
+        android:src="@drawable/bg_place"/>
 
     <FrameLayout
-        android:id ="@+id/actionBarLayout"
+        android:id="@+id/actionBarLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/design_default_color_primary">
+        android:background="#219FDD">
+
         <EditText
             android:id="@+id/searchPlaceEdit"
             android:layout_width="match_parent"
@@ -35,4 +36,5 @@
         android:layout_height="match_parent"
         android:layout_below="@id/actionBarLayout"
         android:visibility="gone"/>
+
 </RelativeLayout>
